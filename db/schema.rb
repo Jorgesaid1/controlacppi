@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_22_152434) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_01_144533) do
+  create_table "controls", force: :cascade do |t|
+    t.string "comentarios"
+    t.integer "num_horas"
+    t.date "fecha_actividad"
+    t.integer "id_empleado"
+    t.integer "id_actividad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "empleados", force: :cascade do |t|
     t.string "nombres"
     t.string "apellido_paterno"
