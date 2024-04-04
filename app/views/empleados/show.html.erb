@@ -1,0 +1,13 @@
+<h1>Hola mundo view</h1>
+  <ul>
+    <li><%=@empleado.nombres%></li>
+    <li><%=@empleado.apellido_paterno%></li>
+    <li><%=@empleado.apellido_materno%></li>
+    <li><%=@empleado.rfc_corto%></li>
+    <li><%=@empleado.administracion%></li>
+    <li><%=@empleado.curp%></li>
+    <li><%=@empleado.celular%></li>
+    <li><%=@empleado.alergia%></li>
+  </ul>
+
+  <h2><%= link_to "back", empleados_path%></h2>
