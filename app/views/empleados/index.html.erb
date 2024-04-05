@@ -1,5 +1,7 @@
 <h1>Hola mundo view</h1>
 <% @empleados.each do |empleado|%>
-<h2><%= link_to empleado.nombres, miempleado_path(empleado)%></h2>
+<h2><%= link_to empleado.nombres, mi_empleado_path(empleado)%></h2>
 
 <%end%>
+
+<h2><%= link_to "crear empleado", new_empleado_path%></h2>

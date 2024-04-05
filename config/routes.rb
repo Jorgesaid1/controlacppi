@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "empleados", to: "empleados#index"
-  get "empleados/:id", to: "empleados#show", as: :miempleado
+  get "empleados/new", to: "empleados#new", as: :new_empleado
+  post "empleados", to: "empleados#create"
+  get "empleados/:id", to: "empleados#show", as: :mi_empleado
 
 end

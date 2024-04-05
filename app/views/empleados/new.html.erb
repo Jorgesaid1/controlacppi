@@ -1,0 +1,27 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Añadir empleado</h3>
+          <%= simple_form_for @empleado do |f| %>
+            <%= f.input :nombres, placeholder: "nombres" %>
+            <%= f.input :apellido_paterno, placeholder: "apellido_paterno" %>
+            <%= f.input :apellido_materno, placeholder: "apellido_materno" %>
+            <%= f.input :rfc_corto, placeholder: "rfc_corto" %>
+            <%= f.input :administracion, placeholder: "administracion" %>
+            <%= f.input :curp, placeholder: "curp" %>
+            <%= f.input :celular, placeholder: "celular" %>
+            <%= f.input :alergia, placeholder: "alergia" %>
+            <%= f.input :ip_domicilio, placeholder: "ip_domicilio" %>
+            <%= f.input :mac_adress, placeholder: "mac_adress" %>
+            <%= f.input :cp_domicilio, placeholder: "cp_domicilio" %>
+            <%= f.input :tipo_sangre, placeholder: "tipo_sangre" %>
+            <%= f.input :padecimiento, placeholder: "padecimiento" %>
+            <%= f.input :medicamento, placeholder: "medicamento" %>
+            <%= f.input :num_empleado, placeholder: "num_empleado" %>
+            <%= f.submit %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
