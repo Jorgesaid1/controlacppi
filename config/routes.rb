@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get "empleados/new", to: "empleados#new", as: :new_empleado
   post "empleados", to: "empleados#create"
   get "empleados/:id", to: "empleados#show", as: :mi_empleado
+  get "empleados/:id/edit", to: "empleados#edit", as: :edit_empleado
+  patch "empleados/:id", to: "empleados#update"
 
 end

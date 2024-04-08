@@ -14,6 +14,17 @@ class EmpleadosController < ApplicationController
   def create
     @empleado = Empleado.new(empleado_params)
     @empleado.save
+    redirect_to mi_empleado_path(@empleado)
+  end
+
+  def edit
+    @empleado = Empleado.find(params[:id])
+  end
+
+  def update
+    @empleado = Empleado.find(params[:id])
+    @empleado.update(empleado_params)
+    redirect_to mi_empleado_path(@empleado)
   end
 
   private
