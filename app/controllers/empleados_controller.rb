@@ -27,6 +27,12 @@ class EmpleadosController < ApplicationController
     redirect_to mi_empleado_path(@empleado)
   end
 
+  def destroy
+    @empleado = Empleado.find(params[:id])
+    @empleado.destroy
+    redirect_to empleados_path
+  end
+
   private
 
   def empleado_params
