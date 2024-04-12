@@ -5,12 +5,12 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Añadir empleado</h3>
           <%= simple_form_for @empleado, url: update_empleado_path(@empleado) do |f| %>
-            <%= f.input :nombres, placeholder: "nombres" %>
+            <%= f.input :nombres, placeholder: "nombress" %>
             <%= f.input :apellido_paterno, placeholder: "apellido_paterno" %>
             <%= f.input :apellido_materno, placeholder: "apellido_materno" %>
             <%= f.input :rfc_corto, placeholder: "rfc_corto" %>
             <%= f.input :administracion, placeholder: "administracion" %>
-            <%= f.input :curp, placeholder: "curp" %>
+            <%= f.input :curp, placeholder: "ingresa tu curp a 18 digitos" %>
             <%= f.input :celular, placeholder: "celular" %>
             <%= f.input :alergia, placeholder: "alergia" %>
             <%= f.input :ip_domicilio, placeholder: "ip_domicilio" %>

@@ -4,12 +4,12 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Añadir empleado</h3>
           <%= simple_form_for @empleado do |f| %>
-            <%= f.input :nombres, placeholder: "nombres" %>
-            <%= f.input :apellido_paterno, placeholder: "apellido_paterno" %>
-            <%= f.input :apellido_materno, placeholder: "apellido_materno" %>
-            <%= f.input :rfc_corto, placeholder: "rfc_corto" %>
-            <%= f.input :administracion, placeholder: "administracion" %>
-            <%= f.input :curp, placeholder: "curp" %>
+            <%= f.input :nombres, placeholder: "Nombre o nombres" %>
+            <%= f.input :apellido_paterno, placeholder: "Primer appellido de tu acta de nacimiento" %>
+            <%= f.input :apellido_materno, placeholder: "Segundo appellido de tu acta de nacimiento" %>
+            <%= f.input :rfc_corto, placeholder: "rfc corto 8 posiciones" %>
+            <%= f.input :administracion, placeholder: "administracion cental a la que perteneces" %>
+            <%= f.input :curp, placeholder: "ingresa tu curp a 18 digitos" %>
             <%= f.input :celular, placeholder: "celular" %>
             <%= f.input :alergia, placeholder: "alergia" %>
             <%= f.input :ip_domicilio, placeholder: "ip_domicilio" %>
