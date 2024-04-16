@@ -4,7 +4,7 @@
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow">
         <h3>Añadir empleado</h3>
-          <%= simple_form_for @empleado, url: update_empleado_path(@empleado) do |f| %>
+          <%= simple_form_for @empleado do |f| %>
             <%= f.input :nombres, placeholder: "nombress" %>
             <%= f.input :apellido_paterno, placeholder: "apellido_paterno" %>
             <%= f.input :apellido_materno, placeholder: "apellido_materno" %>

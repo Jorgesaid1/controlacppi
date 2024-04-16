@@ -2,8 +2,8 @@
 
 one:
   fecha_homeoffice: 2024-04-16
-  id_empleado: 1
+  empleado: one
 
 two:
   fecha_homeoffice: 2024-04-16
-  id_empleado: 1
+  empleado: two

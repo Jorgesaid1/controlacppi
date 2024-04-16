@@ -11,5 +11,5 @@
   </ul>
 
   <h2><%= link_to "Modificar", edit_empleado_path(@empleado)%></h2>
-  <h2><%= link_to "Eliminar", mi_empleado_path(@empleado),data: {turbo_method: :delete, turbo_confirm: "¿Estas seguro chav@?"}%></h2>
+  <h2><%= link_to "Eliminar", empleado_path(@empleado),data: {turbo_method: :delete, turbo_confirm: "¿Estas seguro chav@?"}%></h2>
   <h2><%= link_to "Volver", empleados_path%></h2>
