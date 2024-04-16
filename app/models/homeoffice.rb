@@ -1,0 +1,2 @@
+class Homeoffice < ApplicationRecord
+end
