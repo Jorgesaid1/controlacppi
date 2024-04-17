@@ -8,8 +8,12 @@
     <li><%=@empleado.curp%></li>
     <li><%=@empleado.celular%></li>
     <li><%=@empleado.alergia%></li>
+    <li><%@empleado.homeoffices.each do |homeoffice|%></li>
+    <li><%=homeoffice.fecha_homeoffice%></li>
+    <%end%>
   </ul>
 
   <h2><%= link_to "Modificar", edit_empleado_path(@empleado)%></h2>
   <h2><%= link_to "Eliminar", empleado_path(@empleado),data: {turbo_method: :delete, turbo_confirm: "¿Estas seguro chav@?"}%></h2>
   <h2><%= link_to "Volver", empleados_path%></h2>
+  <h2><%= link_to "Ingresar Home Office", new_empleado_homeoffice_path(@empleado)%></h2>

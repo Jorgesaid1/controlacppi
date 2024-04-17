@@ -1,6 +1,6 @@
 <h1>Hola mundo view</h1>
 <% @empleados.each do |empleado|%>
-<h2><%= link_to empleado.apellido_materno, empleado_path(empleado)%></h2>
+<h2><%= link_to empleado.nombres, empleado_path(empleado)%></h2>
 
 <%end%>
 

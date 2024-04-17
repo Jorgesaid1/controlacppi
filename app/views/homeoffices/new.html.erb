@@ -1,0 +1,5 @@
+<h1>Homeoffice</h1>
+<%= simple_form_for [@empleado, @homeoffice] do |f| %>
+  <%= f.input :fecha_homeoffice %>
+  <%= f.submit "Ingresa la fecha ", class: "btn btn-primary" %>
+<% end %>
