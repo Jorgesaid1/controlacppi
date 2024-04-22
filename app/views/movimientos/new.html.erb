@@ -1,0 +1,7 @@
+<h1>Movimientos</h1>
+<%= simple_form_for [@empleado, @movimiento] do |f| %>
+  <%= f.input :fecha_registro %>
+  <%= f.input :hora_entrada %>
+  <%= f.input :hora_salida %>
+  <%= f.submit "Ingresa la fecha ", class: "btn btn-primary" %>
+<% end %>

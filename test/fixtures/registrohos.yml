@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hora_entrada: 2024-04-22 09:19:11
+  hora_salida: 2024-04-22 09:19:11
+  homeoffice: one
+
+two:
+  hora_entrada: 2024-04-22 09:19:11
+  hora_salida: 2024-04-22 09:19:11
+  homeoffice: two

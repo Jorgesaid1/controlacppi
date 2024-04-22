@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'movimientos/new'
+  get 'movimientos/create'
   get 'homeoffice/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :empleados do
     resources :homeoffices, only: [:new, :create]
+    resources :movimientos, only: [:new, :create]
   end
 
   # Defines the root path route ("/")
