@@ -13,8 +13,11 @@ class EmpleadosController < ApplicationController
 
   def create
     @empleado = Empleado.new(empleado_params)
-    @empleado.save
-    redirect_to empleado_path(@empleado)
+    if @empleado.save
+      redirect_to empleado_path(@empleado)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -23,8 +26,11 @@ class EmpleadosController < ApplicationController
 
   def update
     @empleado = Empleado.find(params[:id])
-    @empleado.update(empleado_params)
-    redirect_to empleado_path(@empleado)
+    if @empleado.update(empleado_params)
+      redirect_to empleado_path(@empleado)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy

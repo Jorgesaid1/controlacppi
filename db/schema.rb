@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_16_150700) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_22_145125) do
   create_table "actividads", force: :cascade do |t|
     t.string "nombre_actividad"
     t.string "descripcion_actividad"
@@ -63,6 +63,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_150700) do
     t.index ["empleado_id"], name: "index_homeoffices_on_empleado_id"
   end
 
+  create_table "movimientos", force: :cascade do |t|
+    t.datetime "hora_entrada"
+    t.datetime "hora_salida"
+    t.date "fecha_registro"
+    t.integer "empleado_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["empleado_id"], name: "index_movimientos_on_empleado_id"
+  end
+
   create_table "registros", force: :cascade do |t|
     t.date "hora_entrada"
     t.date "hora_salida"
@@ -73,4 +83,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_150700) do
   end
 
   add_foreign_key "homeoffices", "empleados"
+  add_foreign_key "movimientos", "empleados"
 end

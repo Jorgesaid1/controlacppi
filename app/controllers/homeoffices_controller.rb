@@ -8,8 +8,11 @@ class HomeofficesController < ApplicationController
     @empleado = Empleado.find(params[:empleado_id])
     @homeoffice = Homeoffice.new(homeoffice_params)
     @homeoffice.empleado = @empleado
-    @homeoffice.save
-    redirect_to empleado_path(@empleado)
+    if @homeoffice.save
+      redirect_to empleado_path(@empleado)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
