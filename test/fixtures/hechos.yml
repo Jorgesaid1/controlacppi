@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comentario: MyString
+  empleados: one
+  actividads: one
+
+two:
+  comentario: MyString
+  empleados: two
+  actividads: two

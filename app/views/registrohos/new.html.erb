@@ -1,6 +1,5 @@
-<h1>Movimientos</h1>
-<%= simple_form_for [@empleado, @movimiento] do |f| %>
-  <%= f.input :fecha_registro %>
+<h1>Registro de la hora de entrada y salida</h1>
+<%= simple_form_for [@empleado, @homeoffice, @registroho] do |f| %>
   <%= f.input :hora_entrada %>
   <%= f.input :hora_salida %>
   <%= f.submit "Ingresa la fecha ", class: "btn btn-primary" %>
