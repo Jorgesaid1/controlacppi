@@ -1,0 +1,8 @@
+<h1>Hola mundo de actividades</h1>
+<% @actividads.each do |actividad|%>
+<h2><%= link_to actividad.nombre_actividad, actividad_path(actividad)%></h2>
+
+<%end%>
+
+<h2><%= link_to "crear actividad", new_actividad_path%></h2>
+<h2><%= link_to "regresar a lista de empleados", empleados_path%></h2>

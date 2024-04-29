@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_22_151911) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_29_150905) do
   create_table "actividads", force: :cascade do |t|
     t.string "nombre_actividad"
     t.string "descripcion_actividad"
@@ -46,6 +46,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_22_151911) do
     t.integer "num_empleado"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "hechos", force: :cascade do |t|
+    t.string "comentario"
+    t.integer "empleados_id", null: false
+    t.integer "actividads_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "homeoffice_id", null: false
+    t.index ["actividads_id"], name: "index_hechos_on_actividads_id"
+    t.index ["empleados_id"], name: "index_hechos_on_empleados_id"
+    t.index ["homeoffice_id"], name: "index_hechos_on_homeoffice_id"
   end
 
   create_table "home_offices", force: :cascade do |t|
@@ -91,6 +103,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_22_151911) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "hechos", "actividads", column: "actividads_id"
+  add_foreign_key "hechos", "empleados", column: "empleados_id"
+  add_foreign_key "hechos", "homeoffices"
   add_foreign_key "homeoffices", "empleados"
   add_foreign_key "movimientos", "empleados"
   add_foreign_key "registrohos", "homeoffices"

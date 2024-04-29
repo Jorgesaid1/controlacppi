@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'actividads/show'
+  get 'actividads/new'
+  get 'actividads/edit'
   get 'movimientos/new'
   get 'movimientos/create'
   get 'homeoffice/new'
@@ -8,6 +11,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  resources :actividads
   resources :empleados do
     resources :homeoffices, only: [:new, :create] do
       resources :registrohos, only: [:new, :create]

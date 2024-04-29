@@ -1,3 +1,3 @@
 class Actividad < ApplicationRecord
-  has_many :empleados, dependent: :destroy
+  has_many :empleados, through: :hechos
 end

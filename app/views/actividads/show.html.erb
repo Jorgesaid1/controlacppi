@@ -1,0 +1,7 @@
+<h1>Hola mundo view actividades</h1>
+  <ul>
+    <li><%=@actividad.nombre_actividad%></li>
+    <li><%=@actividad.descripcion_actividad%></li>
+  <h2><%= link_to "Modificar", edit_actividad_path(@actividad)%></h2>
+  <h2><%= link_to "Eliminar", actividad_path(@actividad),data: {turbo_method: :delete, turbo_confirm: "¿Estas seguro chav@?"}%></h2>
+  <h2><%= link_to "Volver", actividads_path%></h2>

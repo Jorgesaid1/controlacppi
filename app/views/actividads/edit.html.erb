@@ -1,0 +1,14 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Modificar actividad</h3>
+          <%= simple_form_for @actividad do |f| %>
+            <%= f.input :nombre_actividad, placeholder: "Nombre corto de la actividad" %>
+            <%= f.input :descripcion_actividad, placeholder: "Detalla en que consiste la actividad" %>
+            <%= f.submit %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

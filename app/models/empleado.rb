@@ -1,7 +1,6 @@
 class Empleado < ApplicationRecord
   has_many :homeoffices, dependent: :destroy
-  has_many :movimientos
-  has_many :actividads, foreign_key: :id_actividad, class_name: 'Control'
+  has_many :actividads, through: :hechos
   validates :nombres, :apellido_paterno, :apellido_materno, :rfc_corto, :administracion, :curp, :num_empleado, presence: true
   validates :nombres, :apellido_paterno, :apellido_materno, format: { with: /\A[a-zA-Z]+(?: [a-zA-Z]+)?+(?: [a-zA-Z]+)?+(?: [a-zA-Z]+)?\z/, message: "Solo recibe letras sin numeros" }
   validates :rfc_corto, :curp, :num_empleado, uniqueness: true
