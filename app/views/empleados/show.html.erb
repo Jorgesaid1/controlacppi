@@ -8,6 +8,14 @@
     <li><%=@empleado.curp%></li>
     <li><%=@empleado.celular%></li>
     <li><%=@empleado.alergia%></li>
+    <li><%=@empleado.ip_domicilio%></li>
+    <li><%=@empleado.mac_adress%></li>
+    <li><%=@empleado.cp_domicilio%></li>
+    <li><%=@empleado.padecimiento%></li>
+    <li><%=@empleado.tipo_sangre%></li>
+    <li><%=@empleado.medicamento%></li>
+    <li><%=@empleado.num_empleado%></li>
+
     <%@empleado.homeoffices.each do |homeoffice|%>
     <li><%=homeoffice.fecha_homeoffice%> <%= link_to "Ingresar Home Office", new_empleado_homeoffice_registroho_path(@empleado,homeoffice.id)%></li>
     <%end%>
