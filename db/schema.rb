@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_30_150826) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_06_153834) do
   create_table "actividads", force: :cascade do |t|
     t.string "nombre_actividad"
     t.string "descripcion_actividad"
@@ -103,10 +103,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_30_150826) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "vinculos", force: :cascade do |t|
+    t.integer "actividad_id", null: false
+    t.integer "registroho_id", null: false
+    t.text "comentarios"
+    t.integer "num_horas"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["actividad_id"], name: "index_vinculos_on_actividad_id"
+    t.index ["registroho_id"], name: "index_vinculos_on_registroho_id"
+  end
+
   add_foreign_key "hechos", "actividads", column: "actividads_id"
   add_foreign_key "hechos", "empleados", column: "empleados_id"
   add_foreign_key "hechos", "homeoffices"
   add_foreign_key "homeoffices", "empleados"
   add_foreign_key "movimientos", "empleados"
   add_foreign_key "registrohos", "homeoffices"
+  add_foreign_key "vinculos", "actividads"
+  add_foreign_key "vinculos", "registrohos"
 end

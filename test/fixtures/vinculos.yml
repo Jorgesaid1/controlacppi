@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  actividad: one
+  registroho: one
+  comentarios: MyText
+  num_horas: 1
+
+two:
+  actividad: two
+  registroho: two
+  comentarios: MyText
+  num_horas: 1
