@@ -1,2 +1,7 @@
-<h1>Vinculos#new</h1>
-<p>Find me in app/views/vinculos/new.html.erb</p>
+<h1>Registrar el numero de horas de la actividad que realizó en la fecha</h1>
+<%= simple_form_for [@empleado, @homeoffice, @registroho, @vinculo] do |f| %>
+  <%= f.input :actividad_id %>
+  <%= f.input :comentarios %>
+  <%= f.input :num_horas %>
+  <%= f.submit "Guardar ", class: "btn btn-primary" %>
+<% end %>
