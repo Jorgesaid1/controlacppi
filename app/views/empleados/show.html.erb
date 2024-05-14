@@ -15,9 +15,12 @@
     <li><%=@empleado.tipo_sangre%></li>
     <li><%=@empleado.medicamento%></li>
     <li><%=@empleado.num_empleado%></li>
-
     <%@empleado.homeoffices.each do |homeoffice|%>
-    <li><%=homeoffice.fecha_homeoffice%> <%= link_to "Ingresar Home Office", new_empleado_homeoffice_registroho_path(@empleado,homeoffice.id)%></li>
+    <li><%=homeoffice.fecha_homeoffice%> <%= link_to "Ingresar hora de entrada o salida", new_empleado_homeoffice_registroho_path(@empleado,homeoffice.id)%></li>
+    <%homeoffice.registrohos.each do |registroho|%>
+      <li>Hora de Entrada:  <%=registroho.hora_entrada%></li>
+      <li>Hora de Salida:  <%=registroho.hora_salida%></li>
+      <%end%>
     <%end%>
   </ul>
 

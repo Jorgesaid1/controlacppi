@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'vinculos/new'
   get 'actividads/show'
   get 'actividads/new'
   get 'actividads/edit'
@@ -14,7 +15,9 @@ Rails.application.routes.draw do
   resources :actividads
   resources :empleados do
     resources :homeoffices, only: [:new, :create] do
-      resources :registrohos, only: [:new, :create]
+      resources :registrohos, only: [:new, :create] do
+        resources :vinculos, only: [:new, :create]
+      end
     end
   end
 
